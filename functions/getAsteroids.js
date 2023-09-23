@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 
 exports.handler = async (event, context) => {
   const date = event.queryStringParameters.date;
-  const API_URL = "https://ssd-api.jpl.nasa.gov/cad.api";
+  const API_URL = "https://api.nasa.gov/neo/rest/v1/feed";
   const API_KEY = process.env.NASA_API_KEY;
   const apiURL = `${API_URL}?api_key=${API_KEY}&start_date=${date}&end_date=${date}`;
   //
